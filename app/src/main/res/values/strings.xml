@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DFM Popular Movies, Stage 1</string>
+
+    <string-array name="spinner_options">
+        <item>Most Popular</item>
+        <item>Top Rated</item>
+    </string-array>
 </resources>
