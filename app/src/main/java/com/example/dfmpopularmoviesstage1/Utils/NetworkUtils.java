@@ -15,7 +15,7 @@ public class NetworkUtils {
     private static final String TAG = NetworkUtils.class.getSimpleName();
 
     private static final String TMDB_BASE_URL = "https://api.themoviedb.org/3/movie";
-    private static final String API_KEY = "974363f36073c386e2efdff64c52400c";
+    private static final String API_KEY = "API KEY HERE";
 
     public static URL buildUrl(String query) {
         Uri builtUri = Uri.parse(TMDB_BASE_URL).buildUpon()

@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">DFM Popular Movies, Stage 1</string>
+<!--    %d is a placeholder for the rating-->
+    <string name="rating">%s/10</string>
+    <string name="rating_label">Rating</string>
+    <string name="release_date_label">Release Date</string>
+    <string name="overview_label">Overview</string>
+
 
     <string-array name="spinner_options">
         <item>Most Popular</item>

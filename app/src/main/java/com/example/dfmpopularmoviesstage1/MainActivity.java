@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             JSONObject movieDetails = moviesJsonArray.getJSONObject(i);
 
             moviesArray[i].setTitle(movieDetails.getString("title"));
-            moviesArray[i].setVoteAverage(movieDetails.getLong("vote_average"));
+            moviesArray[i].setVoteAverage(movieDetails.getDouble("vote_average"));
             moviesArray[i].setOverview(movieDetails.getString("overview"));
             moviesArray[i].setReleaseDate(movieDetails.getString("release_date"));
             moviesArray[i].setPosterPath(movieDetails.getString("poster_path"));

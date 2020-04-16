@@ -6,19 +6,27 @@ import android.os.Parcelable;
 public class Movie implements Parcelable {
 
     private String title;
-    private long voteAverage;
+    private Double voteAverage;
     private String overview;
     private String releaseDate;
     private String posterPath;
 
     private static final String POSTER_BASE_URL = "https://image.tmdb.org/t/p/w185/";
 
+    public Movie(Parcel parcel) {
+        title = parcel.readString();
+        voteAverage = parcel.readDouble();
+        overview = parcel.readString();
+        releaseDate = parcel.readString();
+        posterPath = parcel.readString();
+    }
+
     public Movie() {}
 
     public static final Creator<Movie> CREATOR = new Creator<Movie>() {
         @Override
         public Movie createFromParcel(Parcel in) {
-            return new Movie();
+            return new Movie(in);
         }
 
         @Override
@@ -35,7 +43,7 @@ public class Movie implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);
-        dest.writeFloat(voteAverage);
+        dest.writeDouble(voteAverage);
         dest.writeString(overview);
         dest.writeString(releaseDate);
         dest.writeString(posterPath);
@@ -49,11 +57,11 @@ public class Movie implements Parcelable {
         this.title = title;
     }
 
-    public long getVoteAverage() {
+    public Double getVoteAverage() {
         return voteAverage;
     }
 
-    public void setVoteAverage(long voteAverage) {
+    public void setVoteAverage(Double voteAverage) {
         this.voteAverage = voteAverage;
     }
 
